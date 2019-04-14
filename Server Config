@@ -1,0 +1,25 @@
+first upgrade server
+install ufw firewall
+use " netstat --tcp --listen --numeric-ports " see open port and add it to UWF
+ufw allow Port#/tcp or udp or ...
+for see port " ufw status verbose "
+Run the following command:
+vi /etc/ssh/sshd_config
+Locate the following line:
+# Port 22
+Remove # and change 22 to your desired port number.
+Restart the sshd service by running the following command:
+service sshd restart
+Reboot your machine with SSH gracefully
+reboot
+
+Reboot forcefully, this is more dangerous to use
+reboot -f
+
+Reboot with power off, this will shut down the machine instead of rebooting
+reboot -p
+
+https://assets.nagios.com/downloads/nagiosxi/docs/Installing-Nagios-XI-Manually-on-Linux.pdf#_ga=2.150135861.2089964462.1555240284-2108596951.1555240284
+QuickExecute the following command in your terminal session:
+curl https://assets.nagios.com/downloads/nagiosxi/install.sh | sh
+That one command will download and install Nagios XI. Please proceed to the Finalize Installation section.
