@@ -1,0 +1,23 @@
+apt-get  install software-properties-common
+apt-get  install build-essential
+apt-get  install libtool autotools-dev autoconf automake
+apt-get  install libssl-dev
+apt-get  install libevent-dev
+apt-get  install libboost-all-dev
+apt-get  install pkg-config
+apt-get  install  libzmq3-dev
+apt-get  install  libboost-all-dev
+
+add-apt-repository ppa:bitcoin/bitcoin
+apt-get update
+apt-get install libdb4.8-dev libdb4.8++-dev
+
+apt-get  install libminiupnpc-dev libzmq3-dev
+apt-get  install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev
+apt-get  install libqrencode-dev bsdmainutils unzip
+apt-get  install libevent-dev
+adduser --system --home /home/bitcoingenx1 bitcoingenx1
+
+
+
+bitcoingenxd -datadir=/home/bitcoingenx1 -daemon
