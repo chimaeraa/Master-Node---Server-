@@ -1,0 +1,9 @@
+adduser --system --home /home/quantisnetd1 quantisnetd1
+ufw allow 7771
+
+
+
+
+quantisnetd    -datadir=/home/quantisnetd1 -daemon
+quantisnet-cli -datadir=/home/quantisnetd1 getinfo
+quantisnet-cli -datadir=/home/quantisnetd1 masternode status
