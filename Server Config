@@ -25,3 +25,5 @@ QuickExecute the following command in your terminal session:
 That one command will download and install Nagios XI. Please proceed to the Finalize Installation section.
 https://exchange.nagios.org/directory/Utilities/Nagios-Uninstall--2F-Reinstall-script/details
 
+https://github.com/tony/tmux-config/blob/master/.tmux.conf
+
