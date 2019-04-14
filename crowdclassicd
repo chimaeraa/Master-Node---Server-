@@ -2,7 +2,7 @@
 
   adduser --system --home /home/crowdclassicd1 crowdclassicd1
   
-  ufw allow 
+  ufw allow 12875
 
 
 
