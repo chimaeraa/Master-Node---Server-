@@ -20,6 +20,6 @@ adduser --system --home /home/bitcoingenx1 bitcoingenx1
 
 
 
-  bitcoingenxd    -datadir=/home/bitcoingenx1 -daemon
-	bitcoingenx-cli -datadir=/home/bitcoingenx1 getinfo
-	bitcoingenx-cli -datadir=/home/bitcoingenx1 masternode status
+bitcoingenxd    -datadir=/home/bitcoingenx1 -daemon
+bitcoingenx-cli -datadir=/home/bitcoingenx1 getinfo
+bitcoingenx-cli -datadir=/home/bitcoingenx1 masternode status
