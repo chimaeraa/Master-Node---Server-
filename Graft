@@ -1,1 +1,29 @@
 
+
+    adduser --system --home /home/graft1 graft1
+    sudo apt update
+    sudo apt install graftnoded graft-supernode
+    curl -s https://deb.graft.community/public.gpg | sudo apt-key add -
+    echo "deb [arch=amd64] https://deb.graft.community bionic main" | sudo tee /etc/apt/sources.list.d/graft.community.list
+    
+    sudo ufw default allow outgoing
+    sudo ufw default deny incoming
+    sudo ufw allow ssh/tcp
+    sudo ufw limit ssh/tcp
+    sudo ufw allow 28680/tcp            # p2p node port
+    sudo ufw allow 28681/tcp            # rpc node port
+    sudo ufw allow 28690/tcp            # rpc supernode port
+    sudo ufw logging on
+    sudo ufw -f enable
+    sudo ufw status
+
+    rm -r lmdb
+    curl http://graftbuilds-ohio.s3.amazonaws.com/lmdb.tar.gz | tar xzf -
+    cd lmdb && rm em* && rm lo*
+    
+    
+    graftnoded --data-dir=/home/graft1e --detach
+
+    graftnoded 
+    
+    
