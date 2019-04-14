@@ -22,8 +22,8 @@
     cd lmdb && rm em* && rm lo*
     
     
-    graftnoded --data-dir=/home/graft1e --detach
+    graftnoded --data-dir=/home/graft1 --detach
 
-    graftnoded 
-    
+    tmux new-session -s'Graft Supernode'
+    graft-supernode --config-file /home/graft1/config.ini
     
