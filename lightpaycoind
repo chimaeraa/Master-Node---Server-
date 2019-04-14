@@ -1,11 +1,11 @@
 
 
 adduser --system --home /home/lightpaycoind1 lightpaycoind1
-ufw allow 
+ufw allow 39797
 
 
 
 
 lightpaycoind     -datadir=/home/lightpaycoind1 -daemon
-lightpaycoind-cli -datadir=/home/lightpaycoind1 getinfo
-lightpaycoind-cli -datadir=/home/lightpaycoind1 masternode status
+lightpaycoin-cli -datadir=/home/lightpaycoind1 getinfo
+lightpaycoin-cli -datadir=/home/lightpaycoind1 masternode status
