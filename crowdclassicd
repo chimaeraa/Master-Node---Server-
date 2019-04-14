@@ -1,0 +1,12 @@
+
+
+  adduser --system --home /home/crowdclassicd1 crowdclassicd1
+  
+  ufw allow 
+
+
+
+
+crowdclassicd     -datadir=/home/crowdclassicd1 -daemon
+crowdclassicd-cli -datadir=/home/crowdclassicd1 getinfo
+crowdclassicd-cli -datadir=/home/crowdclassicd1 masternode status
