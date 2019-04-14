@@ -1,0 +1,15 @@
+	mkdir ~/deps
+  wget http://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.gz
+  tar xvfz boost_1_58_0.tar.gz
+  
+  
+  adduser --system --home /home/phantomxd1 phantomxd1
+  ufw allow 
+  
+  
+  
+  
+  phantomxd	-daemon -server
+	phantomxd	getbalance
+	phantomxd	listtransactions
+	phantomxd	masternode start
