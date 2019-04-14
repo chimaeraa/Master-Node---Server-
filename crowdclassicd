@@ -8,5 +8,5 @@
 
 
 crowdclassicd     -datadir=/home/crowdclassicd1 -daemon
-crowdclassicd-cli -datadir=/home/crowdclassicd1 getinfo
-crowdclassicd-cli -datadir=/home/crowdclassicd1 masternode status
+crowdclassic-cli  -datadir=/home/crowdclassicd1 getinfo
+crowdclassic-cli  -datadir=/home/crowdclassicd1 masternode status
