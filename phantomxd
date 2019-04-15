@@ -1,7 +1,54 @@
+  sudo apt-get install build-essential libtool automake autotools-dev autoconf pkg-config libgmp3-dev libevent-dev bsdmainutils
+  
+  
+  Download and build BerkeleyDB 5.0.32.NC
 	mkdir ~/deps
+	cd ~/deps
+	wget 'http://download.oracle.com/berkeley-db/db-5.0.32.NC.tar.gz'
+	tar -xzvf db-5.0.32.NC.tar.gz
+	cd db-5.0.32.NC/build_unix/
+	../dist/configure --enable-cxx --disable-shared
+	make
+
+Compiling miniupnpc
+Install Miniupnpc. Download it from here http://miniupnp.free.fr/files/download.php?file=miniupnpc-1.9.tar.gz
+and place it in your deps folder, then :
+	cd ~/deps
+	tar xvfz miniupnpc-1.9.tar.gz
+
+	mv miniupnpc-1.9 miniupnpc
+	cd miniupnpc
+	make upnpc-static  
+  
+  
+  mkdir ~/deps
   wget http://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.gz
   tar xvfz boost_1_58_0.tar.gz
-  
+  Compiling OpenSSL
+
+download 1.0.2g version here : https://www.openssl.org/source/old/1.0.2/openssl-1.0.2g.tar.gz
+place archive in deps folders then :
+	cd ~/deps
+	tar xvfz openssl-1.0.2g.tar.gz
+	cd openssl-1.0.2g
+	./config no-shared no-dso
+	make depend
+	make
+
+Compiling QT 5.10.1 statically
+Download QT 5.10.1 sources https://download.qt.io/official_releases/qt/5.10/5.10.1/single/qt-everywhere-src-5.10.1.tar.xz
+Extract in deps folder
+	cd ~/deps/
+	tar xvfJ qt-everywhere-src-5.10.1.tar.xz
+after everything is extracted, create another directory where static libs will be installed. For example, i created ~/deps/Qt/5.10.1_static and used that directory in configure command below (it may take a while) :
+	mkdir  ~/deps/Qt
+	mkdir  ~/deps/Qt/5.10.1_static
+	cd ~/deps/qt-everywhere-src-5.10.1
+	./configure -static -opensource -release -confirm-license -no-compile-examples -nomake tests -prefix ~/deps/Qt/5.10.1_static -qt-zlib -qt-libpng -no-libjpeg -qt-xcb -qt-freetype -qt-pcre -qt-harfbuzz -no-openssl -skip wayland -skip qtserialport -skip script -pulseaudio -alsa -nomake tools
+After it successfuly ends :
+	make
+	make install
+
   
   adduser --system --home /home/phantomxd1 phantomxd1
   ufw allow 
@@ -9,7 +56,7 @@
   
   
   
-  phantomxd	-daemon -server
-	phantomxd	getbalance
-	phantomxd	listtransactions
-	phantomxd	masternode start
+  	phantomxd	-datadir=/home/phantomxd1 -daemon -server
+	phantomxd	-datadir=/home/phantomxd1 getbalance
+	phantomxd	-datadir=/home/phantomxd1 listtransactions
+	phantomxd	-datadir=/home/phantomxd1 masternode start
