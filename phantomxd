@@ -51,7 +51,7 @@ After it successfuly ends :
 
   
   adduser --system --home /home/phantomxd1 phantomxd1
-  ufw allow 
+  ufw allow 9340
   
   
   
