@@ -27,3 +27,7 @@ https://exchange.nagios.org/directory/Utilities/Nagios-Uninstall--2F-Reinstall-s
 
 https://github.com/tony/tmux-config/blob/master/.tmux.conf
 
+list of all service
+  systemctl list-units --all --type=service --no-pager
+  
+  
