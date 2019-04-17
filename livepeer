@@ -12,4 +12,4 @@ livepeer -datadir=/home/livepeer -rinkeby  -transcoder -gasLimit 400000 -v 6
 livepeer -datadir=/home/livepeer -transcoder -gasLimit 400000 -v 6
 
 
-livepeer_cli
+livepeer_cli -datadir=/home/livepeer
