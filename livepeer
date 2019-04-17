@@ -1,0 +1,8 @@
+wget https://github.com/livepeer/go-livepeer/releases/download/v0.3.3/livepeer_linux.tar.gz
+
+tar xvfz livepeer_linux.tar.gz
+
+adduser --system --home /home/livepeer livepeer
+ 
+livepeer -datadir=/home/livepeer
+livepeer_cli
