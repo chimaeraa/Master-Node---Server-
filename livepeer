@@ -13,3 +13,4 @@ livepeer -datadir=/home/livepeer -transcoder -gasLimit 400000 -v 6
 
 
 livepeer_cli 
+0xd3e11678b0e70758BD6D5945b9E24cC71541ACC6
