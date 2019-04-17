@@ -6,10 +6,10 @@ adduser --system --home /home/livepeer livepeer
 ufw allow 1935
 ufw allow 7935
 ======================test net
-livepeer -datadir=/home/livepeer -rinkeby  -gasLimit 400000 -v 6
+livepeer -datadir=/home/livepeer -rinkeby  -transcoder -gasLimit 400000 -v 6
 
 ======================Main net
-livepeer -datadir=/home/livepeer -gasLimit 400000 -v 6
+livepeer -datadir=/home/livepeer -transcoder -gasLimit 400000 -v 6
 
 
 livepeer_cli
