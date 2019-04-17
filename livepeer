@@ -3,6 +3,8 @@ wget https://github.com/livepeer/go-livepeer/releases/download/v0.3.3/livepeer_l
 tar xvfz livepeer_linux.tar.gz
 
 adduser --system --home /home/livepeer livepeer
- 
+ufw allow 1935
+ufw allow 7935
+
 livepeer -datadir=/home/livepeer
 livepeer_cli
