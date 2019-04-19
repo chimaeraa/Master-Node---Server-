@@ -1,0 +1,3 @@
+./witness_node -d /home/bitshare/witness --rpc-endpoint 127.0.0.1:8090 --partial-operations true --replay-blockchain
+
+./cli_wallet -w wallet_for_withdrawal.json -s ws://127.0.0.1:8090 -H 127.0.0.1:8091
