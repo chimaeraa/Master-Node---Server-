@@ -1,0 +1,5 @@
+see all oppen port 
+lsof -i
+In this method we will use nmap to detect the open port on your system. We can use the following command to show tcp port connections:
+
+nmap -sT -O localhost
