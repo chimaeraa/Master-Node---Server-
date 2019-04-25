@@ -1,0 +1,55 @@
+#!/bin/bash
+function BGX(){
+echo -e "---------------------------===============---------------------------"
+echo -e "				  BGX"
+su bitcoingenx1 -s /bin/bash -c  'bitcoingenxd -datadir=/home/bitcoingenx1 -daemon'
+sleep 5
+}
+
+function LPC(){
+echo -e "---------------------------===============---------------------------"
+echo -e "				  LPC"
+su lightpaycoind1 -s /bin/bash -c 'lightpaycoind -datadir=/home/lightpaycoind1 -daemon'
+sleep 5
+}
+
+function CrCl(){
+echo -e "---------------------------===============---------------------------"
+echo -e "				 CrCl"
+su crowdclassicd1 -s /bin/bash -c 'crowdclassicd -datadir=/home/crowdclassicd1 -daemon'
+sleep 5
+}
+
+function PMX(){
+echo -e "---------------------------===============---------------------------"
+echo -e "				 PMX"
+su phantomxd1 -s /bin/bash -c 'phantomxd -datadir=/home/phantomxd1 -daemon -server'
+sleep 5
+}
+
+function QUNT(){
+echo -e "---------------------------===============---------------------------"
+echo -e "				QUNT"
+su quantisnetd1 -s /bin/bash -c 'quantisnetd -datadir=/home/quantisnetd1 -daemon'
+sleep 5
+}
+
+function Graft(){
+echo -e "---------------------------===============---------------------------"
+echo -e "				Graft"
+su graft1 -s /bin/bash -c 'graftnoded --data-dir=/home/graft1 --detach'
+sleep 10
+su graft1 -s /bin/bash -c 'tmux new -d -s GSn && tmux  send-keys -t GSn "graft-supernode --config-file /home/graft1/config.ini" ENTER'
+sleep 5
+}
+##### Main #####
+clear
+
+PMX
+BGX
+LPC
+CrCl
+QUNT
+Graft
+
+su phantomxd1 -s /bin/bash -c 'phantomxd -datadir=/home/phantomxd1 masternode start'
