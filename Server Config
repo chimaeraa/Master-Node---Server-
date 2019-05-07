@@ -1,3 +1,7 @@
+echo "blacklist floppy" | sudo tee /etc/modprobe.d/blacklist-floppy.conf
+sudo rmmod floppy
+sudo dpkg-reconfigure initramfs-tools
+
 see open port and add it to UWF
   netstat --tcp --listen --numeric-ports
 
@@ -34,3 +38,8 @@ ubuntu start app
 crontab -e
 
 @reboot /root/mahdi.sh
+
+
+https://www.tecmint.com/configure-network-static-ip-address-in-ubuntu/
+
+
