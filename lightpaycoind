@@ -9,3 +9,7 @@ ufw allow 39797
 lightpaycoind     -datadir=/home/lightpaycoind1 -daemon
 lightpaycoin-cli -datadir=/home/lightpaycoind1 getinfo
 lightpaycoin-cli -datadir=/home/lightpaycoind1 masternode status
+
+
+
+startmasternode "alias" "0" "MN1"
