@@ -1,3 +1,11 @@
+apt-get install libzmq3-dev
+
+add-apt-repository ppa:bitcoin/bitcoin
+apt-get update
+apt-get install libdb4.8-dev libdb4.8++-dev
+
+apt-get install -y libevent-dev
+
 adduser --system --home /home/quantisnetd1 quantisnetd1
 ufw allow 7771
 
