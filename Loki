@@ -1,1 +1,23 @@
-adduser --system --home /home/loki loki
+adduser --system --home /home/loki loki 
+
+wget https://github.com/loki-project/loki/releases/download/v3.0.6/loki-linux-x64-v3.0.6.zip
+
+sudo nano /etc/systemd/system/lokid.service
+    Description=lokid service node
+    After=network-online.target
+
+    [Service]
+    Type=simple
+    User=loki
+    ExecStart=/home/loki/lokid --non-interactive --service-node
+    Restart=always
+    RestartSec=30s
+
+    [Install]
+    WantedBy=multi-user.target
+    
+sudo systemctl daemon-reload
+sudo systemctl enable lokid.service
+sudo systemctl start lokid.service
+
+sudo journalctl -u lokid.service -af
