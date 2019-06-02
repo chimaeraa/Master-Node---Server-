@@ -1,0 +1,5 @@
+adduser --system --home /home/azart azart
+
+su azart -s /bin/bash -c 'azartd -datadir=/home/azart -daemon'
+
+azart-cli  -datadir=/home/azart getinfo
