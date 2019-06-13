@@ -1,10 +1,23 @@
 
 
     adduser --system --home /home/graft1 graft1
+    
+        curl -s https://deb.graft.community/public.gpg | sudo apt-key add -
+        echo "deb https://deb.graft.community bionic main" | sudo tee /etc/apt/sources.list.d/graft.community.list
     sudo apt update
-    sudo apt install graftnoded graft-supernode
-    curl -s https://deb.graft.community/public.gpg | sudo apt-key add -
-    echo "deb [arch=amd64] https://deb.graft.community bionic main" | sudo tee /etc/apt/sources.list.d/graft.community.list
+   
+    Installing graftnoded
+
+    sudo apt install  graftnoded
+
+    Installing graft-supernode
+
+    sudo apt install  graft-supernode
+
+    Installing graft-wallet-cli
+
+    sudo apt install  graft-wallet
+    
     
     sudo ufw default allow outgoing
     sudo ufw default deny incoming
